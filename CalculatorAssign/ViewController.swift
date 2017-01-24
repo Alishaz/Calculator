@@ -23,19 +23,26 @@ class ViewController: UIViewController {
     {
         if PerformingMath == true
         {
-            Label.text = String(sender.tag-1) //having the previous number + new number
+            Label.text = String(sender.tag-1) //having the previous number
             NumberOnScreen = Double(Label.text!)!
-            if decimalIsPressed == false {
-                Label.text = Label.text! + "."
-                decimalIsPressed = true
-            }
             PerformingMath = false
         }
         else
         {
-        
-        Label.text = Label.text! + String(sender.tag-1)  // Each button is assigned a tag number
-        NumberOnScreen = Double(Label.text!)!  //convert the number to real
+            if Int(Label.text!) != 0
+            {
+                if(sender.tag == 17){
+                    Label.text = Label.text! + "."
+                }else{
+                    Label.text = Label.text! + String(sender.tag-1)  // Each button is assigned a tag number
+                }
+                NumberOnScreen = Double(Label.text!)!  //convert the number to real
+            }
+            else
+            {
+                Label.text = String(sender.tag-1)  // Each button is assigned a tag number
+                NumberOnScreen = Double(Label.text!)!  //convert the number to real
+            }
         }
         
     }
