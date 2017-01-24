@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CalculatorAssign
 //
-//  Created by rushabh on 22/01/17.
+//  Created by Alisha Zaveri on 22/01/17.
 //  Copyright © 2017 CentennialCollege. All rights reserved.
 //
 
